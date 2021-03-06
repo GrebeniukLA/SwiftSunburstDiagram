@@ -42,10 +42,12 @@ public class SunburstConfiguration: ObservableObject {
 
     @Published public var selectedNode: Node?
     @Published public var focusedNode: Node?
+    
+    public var labelForegroundColor: Color = .white
 
     private var cancellable: AnyCancellable?
     private var isValidatingAndPreparing = false
-
+    
     lazy var sunburst: Sunburst = {
         return Sunburst(configuration: self)
     }()

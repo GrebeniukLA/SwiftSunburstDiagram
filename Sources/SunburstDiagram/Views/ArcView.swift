@@ -61,6 +61,7 @@ struct ArcLabel: View {
             }
             if !arc.isTextHidden {
                 Text(arc.node.name)
+                    .foregroundColor(configuration.labelForegroundColor)
             }
         }
         .offset(x: offset.x, y: offset.y)
